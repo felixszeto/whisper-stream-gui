@@ -6,6 +6,9 @@ This project provides a graphical user interface (GUI) for real-time audio trans
 
 Whisper Stream GUI is a user-friendly application that allows you to transcribe audio in real-time using the Whisper model. It is designed to be easy to use and provides a simple interface for streaming audio and viewing transcriptions.
 
+<img src="https://github.com/user-attachments/assets/d827aec8-1b9e-489d-942a-3194b5a41457" width="300" alt="Gui for whisper">
+<img src="https://github.com/user-attachments/assets/256d65cc-867d-4f27-baa3-fef6196ae04a" width="300" alt="Real-Time logging">
+
 ## Installation
 
 To install and run Whisper Stream GUI, follow these steps:
