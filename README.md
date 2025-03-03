@@ -33,8 +33,8 @@ To install and run Whisper Stream GUI, follow these steps:
     You can clone it to your local machine.
 
     ```bash
-    git clone https://github.com/felixszeto/Whisper-Stream-GUI.git
-    cd Whisper-Stream-GUI
+    git clone https://github.com/felixszeto/whisper_stream_gui.git
+    cd whisper_stream_gui
     ```
 
 6.  **Install Dependencies:**
