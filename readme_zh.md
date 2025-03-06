@@ -1,4 +1,4 @@
-[English](https://github.com/felixszeto/whisper-stream-gui/blob/main/readme.md)
+[English](https://github.com/felixszeto/whisper-stream-gui/blob/main/README.m)
 
 # Whisper Stream GUI
 
