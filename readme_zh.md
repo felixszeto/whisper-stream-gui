@@ -1,3 +1,5 @@
+[English](https://github.com/felixszeto/whisper-stream-gui/blob/main/readme.md)
+
 # Whisper Stream GUI
 
 本專案提供了一個圖形使用者介面 (GUI)，用於使用 Whisper 進行即時音訊轉錄。
