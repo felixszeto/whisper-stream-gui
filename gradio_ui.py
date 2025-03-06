@@ -25,11 +25,9 @@ def transcribe_audio(audio_data, history_state):
     result = model.transcribe(audio_path)
     text = result["text"]
     timestamp = datetime.now().strftime("%H:%M:%S")
-    separator = "-" * 30 # Separator line
     formatted_text = f"[{timestamp}] {text}\n"
     if text.strip():  # Only append if text is not empty or just whitespace
         history.append((None, formatted_text))
-    time.sleep(2) # Add delay here
     return history, history
 
 with gr.Blocks(title="Streaming Audio Translator") as app:
