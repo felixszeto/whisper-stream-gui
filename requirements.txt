@@ -1,7 +1,5 @@
 tqdm
 more-itertools
---extra-index-url https://download.pytorch.org/whl/cu113
-torch
 transformers>=4.19.0
 ffmpeg-python==0.2.0
 streamlink
