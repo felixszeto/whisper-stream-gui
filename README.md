@@ -1,3 +1,5 @@
+[中文閱讀](https://github.com/felixszeto/whisper-stream-gui/blob/main/readme_zh.md)
+
 # Whisper Stream GUI
 
 This project provides a graphical user interface (GUI) for real-time audio transcription using Whisper.
