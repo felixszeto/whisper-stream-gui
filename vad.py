@@ -2,20 +2,21 @@ import torch
 import warnings
 
 warnings.filterwarnings("ignore")
-
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 class VAD:
     def __init__(self):
         self.model = init_jit_model("silero_vad.jit")
 
-    def no_speech(self, audio):
-        speech = get_speech_timestamps(torch.Tensor(audio), self.model, return_seconds=True)
+    def no_speech(self, audio, sample_rate):
+        speech = get_speech_timestamps(torch.Tensor(audio).to(device), self.model, return_seconds=True, sampling_rate=sample_rate)
+        print('speech', speech)
         # print(speech)
         return len(speech) == 0
 
 
 def init_jit_model(model_path: str,
-                   device=torch.device('cpu')):
+                   device=device):
     torch.set_grad_enabled(False)
     model = torch.jit.load(model_path, map_location=device)
     model.eval()
@@ -24,7 +25,7 @@ def init_jit_model(model_path: str,
 
 def get_speech_timestamps(audio: torch.Tensor,
                           model,
-                          threshold: float = 0.5,
+                          threshold: float = 0.1,
                           sampling_rate: int = 16000,
                           min_speech_duration_ms: int = 250,
                           min_silence_duration_ms: int = 100,
