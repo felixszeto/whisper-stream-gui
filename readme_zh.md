@@ -69,6 +69,12 @@ Whisper Stream GUI 是一個使用者友善的應用程式，讓您可以使用 
 
 ## Whisper 模型選擇
 
+### 模型下載
+
+如果您想使用 `faster-whisper-large-v3` 模型，您需要從 [Hugging Face](https://huggingface.co/Systran/faster-whisper-large-v3) 下載模型文件，並將它們放在 `faster-whisper-large-v3/` 資料夾中。
+
+或者，您可以在 `app.py` 檔案中修改模型載入程式碼，以使用 `faster-whisper-large-v3` 模型。
+
 您可以透過修改 `app.py` 檔案來變更用於轉錄的 Whisper 模型。
 
 -   開啟 `app.py` 檔案。

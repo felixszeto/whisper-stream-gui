@@ -72,6 +72,12 @@ To install and run Whisper Stream GUI, follow these steps:
 ## Whisper Model Selection
 You can change the Whisper model used for transcription by modifying the `app.py` file.
 
+### Model Download
+
+If you want to use the `faster-whisper-large-v3` model, you need to download the model files from [Hugging Face](https://huggingface.co/Systran/faster-whisper-large-v3) and place them in the `faster-whisper-large-v3/` folder.
+
+Alternatively, you can modify the model loading code in the `app.py` file to use the `faster-whisper-large-v3` model.
+
 -   Open the `app.py` file.
 -   Locate the line `model = whisper.load_model("tiny")`.
 -   Replace `"tiny"` with the desired model size. Available models are: `tiny`, `tiny_en`, `base`, `base_en`, `small`, `small_en`, `medium`, `medium_en`, `large`, and `turbo`.
