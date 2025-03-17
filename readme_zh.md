@@ -62,16 +62,16 @@ Whisper Stream GUI 是一個使用者友善的應用程式，讓您可以使用 
     **HTTPS 憑證設定（麥克風存取權限需要）：**
     由於透過不安全的 HTTP 使用麥克風的安全性限制，HTTPS 設定與 SSL 憑證對於瀏覽器允許麥克風存取權限是**必需的**。
     要設定 HTTPS，您需要設定 SSL 憑證：
-    -   修改 `gradio_ui.py` 腳本以指定您的 SSL 憑證檔案的路徑。
-    -   在 `gradio_ui.py` 中找到 `app.launch()` 函數。
+    -   修改 `app.py` 腳本以指定您的 SSL 憑證檔案的路徑。
+    -   在 `app.py` 中找到 `app.launch()` 函數。
     -   將 `ssl_keyfile` 和 `ssl_certfile` 參數調整為您的金鑰和憑證檔案的正確路徑。
     -   確保憑證檔案（預設為 `key.pem` 和 `chain.pem`）放置在 `ssl/` 目錄中，或相應地更新腳本中的路徑。
 
 ## Whisper 模型選擇
 
-您可以透過修改 `gradio_ui.py` 檔案來變更用於轉錄的 Whisper 模型。
+您可以透過修改 `app.py` 檔案來變更用於轉錄的 Whisper 模型。
 
--   開啟 `gradio_ui.py` 檔案。
+-   開啟 `app.py` 檔案。
 -   找到 `model = whisper.load_model("tiny")` 行。
 -   將 `"tiny"` 替換為所需的模型大小。可用的模型有：`tiny`、`tiny_en`、`base`、`base_en`、`small`、`small_en`、`medium`、`medium_en`、`large` 和 `turbo`。
 
@@ -93,7 +93,7 @@ Whisper Stream GUI 是一個使用者友善的應用程式，讓您可以使用 
 
 ## 專案檔案
 
--   `gradio_ui.py`：此 Python 腳本包含 Gradio UI 應用程式程式碼。
+-   `app.py`：此 Python 腳本包含 Gradio UI 應用程式程式碼。
 -   `start_gui.bat`：此批次檔用於啟動 Gradio GUI 應用程式。
 -   `ssl/`：如果 GUI 設定為透過 HTTPS 執行，則此目錄可能包含 SSL 憑證檔案。
 

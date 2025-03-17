@@ -1,3 +1,3 @@
 call conda activate whisper
-python gradio_ui.py
+python app.py
 pause

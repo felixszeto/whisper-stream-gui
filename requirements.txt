@@ -8,4 +8,6 @@ numpy
 soundfile
 git+https://github.com/openai/whisper.git
 scipy
-faster_whisper
+faster-whisper
+flask
+flask-socketio

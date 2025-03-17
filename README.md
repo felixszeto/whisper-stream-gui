@@ -64,15 +64,15 @@ To install and run Whisper Stream GUI, follow these steps:
     **HTTPS Certificate Configuration (Required for Microphone Access):**
     HTTPS configuration with SSL certificates is **required** for browsers to allow microphone access due to security restrictions for microphone usage over non-secure HTTP.
     To configure HTTPS, you need to set up SSL certificates:
-    -   Modify the `gradio_ui.py` script to specify the paths to your SSL certificate files.
-    -   Find the `app.launch()` function in `gradio_ui.py`.
+    -   Modify the `app.py` script to specify the paths to your SSL certificate files.
+    -   Find the `app.launch()` function in `app.py`.
     -   Adjust the `ssl_keyfile` and `ssl_certfile` parameters to the correct paths of your key and certificate files.
     -   Ensure that the certificate files (`key.pem` and `chain.pem` by default) are placed in the `ssl/` directory, or update the paths accordingly in the script.
 
 ## Whisper Model Selection
-You can change the Whisper model used for transcription by modifying the `gradio_ui.py` file.
+You can change the Whisper model used for transcription by modifying the `app.py` file.
 
--   Open the `gradio_ui.py` file.
+-   Open the `app.py` file.
 -   Locate the line `model = whisper.load_model("tiny")`.
 -   Replace `"tiny"` with the desired model size. Available models are: `tiny`, `tiny_en`, `base`, `base_en`, `small`, `small_en`, `medium`, `medium_en`, `large`, and `turbo`.
 
@@ -94,7 +94,7 @@ You can change the Whisper model used for transcription by modifying the `gradio
 
 ## Project Files
 
--   `gradio_ui.py`: This Python script contains the Gradio UI application code.
+-   `app.py`: This Python script contains the Gradio UI application code.
 -   `start_gui.bat`: This batch file is used to start the Gradio GUI application.
 -   `ssl/`: This directory may contain SSL certificate files if the GUI is configured to run over HTTPS.
 
