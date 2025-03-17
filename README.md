@@ -70,13 +70,12 @@ To install and run Whisper Stream GUI, follow these steps:
     -   Ensure that the certificate files (`key.pem` and `chain.pem` by default) are placed in the `ssl/` directory, or update the paths accordingly in the script.
 
 ## Whisper Model Selection
+
+**The default model is `faster-whisper-large-v3`**.
+
+Please download the **`faster-whisper-large-v3` model files** from [Hugging Face](https://huggingface.co/Systran/faster-whisper-large-v3) and place them in the `faster-whisper-large-v3/` folder.
+
 You can change the Whisper model used for transcription by modifying the `app.py` file.
-
-### Model Download
-
-If you want to use the `faster-whisper-large-v3` model, you need to download the model files from [Hugging Face](https://huggingface.co/Systran/faster-whisper-large-v3) and place them in the `faster-whisper-large-v3/` folder.
-
-Alternatively, you can modify the model loading code in the `app.py` file to use the `faster-whisper-large-v3` model.
 
 -   Open the `app.py` file.
 -   Locate the line `model = whisper.load_model("tiny")`.
@@ -99,6 +98,30 @@ Alternatively, you can modify the model loading code in the `app.py` file to use
 3.  The transcribed text will be displayed in real-time in the GUI.
 
 ## Project Files
+
+Project file structure:
+
+```
+whisper-stream-gui/
+├── .gitignore
+├── app.py
+├── LICENSE
+├── readme_zh.md
+├── README.md
+├── requirements.txt
+├── silero_vad.jit
+├── start_gui.bat
+├── vad.py
+├── css/
+│   ├── all.min.css
+│   └── bulma.min.css
+├── faster-whisper-large-v3/
+├── js/
+│   └── socket.io.js
+├── ssl/
+└── templates/
+    └── index.html
+```
 
 -   `app.py`: This Python script contains the Gradio UI application code.
 -   `start_gui.bat`: This batch file is used to start the Gradio GUI application.

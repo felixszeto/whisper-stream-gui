@@ -69,11 +69,9 @@ Whisper Stream GUI 是一個使用者友善的應用程式，讓您可以使用 
 
 ## Whisper 模型選擇
 
-### 模型下載
+**預設模型為 `faster-whisper-large-v3`**。
 
-如果您想使用 `faster-whisper-large-v3` 模型，您需要從 [Hugging Face](https://huggingface.co/Systran/faster-whisper-large-v3) 下載模型文件，並將它們放在 `faster-whisper-large-v3/` 資料夾中。
-
-或者，您可以在 `app.py` 檔案中修改模型載入程式碼，以使用 `faster-whisper-large-v3` 模型。
+請從 [Hugging Face](https://huggingface.co/Systran/faster-whisper-large-v3) **下載 `faster-whisper-large-v3` 模型文件**，並將它們放在 `faster-whisper-large-v3/` 資料夾中。
 
 您可以透過修改 `app.py` 檔案來變更用於轉錄的 Whisper 模型。
 
@@ -98,6 +96,30 @@ Whisper Stream GUI 是一個使用者友善的應用程式，讓您可以使用 
 3.  轉錄的文字將即時顯示在 GUI 中。
 
 ## 專案檔案
+
+專案檔案結構如下：
+
+```
+whisper-stream-gui/
+├── .gitignore
+├── app.py
+├── LICENSE
+├── readme_zh.md
+├── README.md
+├── requirements.txt
+├── silero_vad.jit
+├── start_gui.bat
+├── vad.py
+├── css/
+│   ├── all.min.css
+│   └── bulma.min.css
+├── faster-whisper-large-v3/
+├── js/
+│   └── socket.io.js
+├── ssl/
+└── templates/
+    └── index.html
+```
 
 -   `app.py`：此 Python 腳本包含 Gradio UI 應用程式程式碼。
 -   `start_gui.bat`：此批次檔用於啟動 Gradio GUI 應用程式。
