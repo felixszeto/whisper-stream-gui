@@ -247,6 +247,7 @@
         let scriptProcessor;
         let recording = false;
         let lastSentTime = 0; // 初始化 lastSentTime
+        let recordInterval; // 定義 recordInterval 變數
         const recordButton = document.getElementById('recordButton');
         const stopButton = document.getElementById('stopButton');
         const chatContainer = document.getElementById('chat-container');
@@ -282,7 +283,7 @@
                 };
 
                 let messageIndex = 0; // 消息索引
-                setInterval(() => {
+                recordInterval = setInterval(() => {
                     if (recording) {
                         if (audioBuffer.length > 0) {
                             // 只取最近一秒的音頻數據 (sampleRate 假設為 16000)
@@ -328,6 +329,7 @@
             recordButton.classList.remove('is-loading');
             recordButton.disabled = false;
             stopButton.disabled = true;
+            clearInterval(recordInterval); // 停止 recordInterval
             // 停止錄音時，移除 "聆聽中..." 的訊息，可以改成顯示 "已停止錄音" 或其他
             const userMessageDiv = chatContainer.lastElementChild;
             if (userMessageDiv && userMessageDiv.classList.contains('user-message')) {
