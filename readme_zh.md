@@ -8,8 +8,8 @@
 
 Whisper Stream GUI 是一個使用者友善的應用程式，讓您可以使用 Whisper 模型即時轉錄音訊。它設計為易於使用，並提供一個簡單的介面來串流音訊和檢視轉錄內容。
 
-<img src="https://github.com/user-attachments/assets/d827aec8-1b9e-489d-942a-3194b5a41457" width="300" alt="Gui for whisper">
-<img src="https://github.com/user-attachments/assets/256d65cc-867d-4f27-baa3-fef6196ae04a" width="300" alt="Real-Time logging">
+<img src="https://github.com/user-attachments/assets/701333e3-a8c6-41d7-a785-01e53b892dbf" width="300" alt="Gui for whisper">
+<img src="https://github.com/user-attachments/assets/e91ff824-8cef-46e7-99c3-c990af0c4879" width="300" alt="Real-Time transcription">
 
 ## 安裝
 
