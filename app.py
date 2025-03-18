@@ -89,7 +89,8 @@ def transcribe_audio_logic(audio_data, language="en"): # 轉錄函數接收 lang
             previous_segment = ""
             segments, info = model.transcribe(tmpfile.name,
                                                 language=language,
-                                                task="translate")
+                                                # task="translate"
+                                                )
             for segment in segments:
                 if segment.text != previous_segment:
                     decoded_text += segment.text
